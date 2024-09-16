@@ -31,7 +31,6 @@ void GetWindowsVersion()
     }
 }
 
-//
 auto BytesToMegabytes(auto bytes)
 {
     auto megabytes = bytes / 1024 / 1024;
