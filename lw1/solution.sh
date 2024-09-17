@@ -25,6 +25,7 @@ man wc > wchelp.txt
 # Выводим содержимое файла wchelp.txt в консоль
 cat wchelp.txt
 
+wc -l wchelp.txt
 # Сохраняем количество строк в файле wchelp.txt в файл wchelp-lines.txt, -l говорит, что это количество строк, -d - разделитель -- пробел
 wc -l wchelp.txt | cut -d' ' -f1 > wchelp-lines.txt
 
@@ -51,6 +52,3 @@ fi
 
 # Перемещаем новый файл result.tar.gz в текущий каталог
 mv out/result.tar.gz .
-
-# Удаляем каталог out
-rmdir out
