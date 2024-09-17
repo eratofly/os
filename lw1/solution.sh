@@ -35,7 +35,7 @@ tac wchelp.txt > wchelp-reversed.txt
 # Создаем файл all.txt, объединяющий содержимое всех файлов
 cat wchelp.txt wchelp-reversed.txt me.txt metoo.txt wchelp-lines.txt > all.txt
 
-# Создаем архив result.tar с файлами .txt
+# Создаем архив result.tar с файлами .txt -cf создать файл
 # shellcheck disable=SC2035
 tar -cf result.tar *.txt
 

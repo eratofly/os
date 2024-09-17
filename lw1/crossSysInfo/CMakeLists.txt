@@ -4,5 +4,7 @@ project(os)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(os
-        sys-info-win.cpp
+        SysInfo.cpp
+        SysInfo.h
+        crossSysInfo.cpp
 )
