@@ -1,4 +1,4 @@
-#!/study/os/lw1 bash
+#!/usr/bin/env bash
 # Если любая из следующих команд завершится неудачей, скрипт прекратит свою работу
 set -e
 
@@ -25,7 +25,7 @@ man wc > wchelp.txt
 # Выводим содержимое файла wchelp.txt в консоль
 cat wchelp.txt
 
-# Сохраняем количество строк в файле wchelp.txt в файл wchelp-lines.txt
+# Сохраняем количество строк в файле wchelp.txt в файл wchelp-lines.txt, -l говорит, что это количество строк, -d - разделитель -- пробел
 wc -l wchelp.txt | cut -d' ' -f1 > wchelp-lines.txt
 
 # Создаем файл wchelp-reversed.txt с содержимым wchelp.txt в обратном порядке
@@ -35,6 +35,7 @@ tac wchelp.txt > wchelp-reversed.txt
 cat wchelp.txt wchelp-reversed.txt me.txt metoo.txt wchelp-lines.txt > all.txt
 
 # Создаем архив result.tar с файлами .txt
+# shellcheck disable=SC2035
 tar -cf result.tar *.txt
 
 # Сжимаем архив result.tar в result.tar.gz
