@@ -1,0 +1,1 @@
+add_library(ossrc MemoryManager.cpp)
